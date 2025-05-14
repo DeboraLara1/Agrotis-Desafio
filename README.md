@@ -1,46 +1,92 @@
-# Teste Front-End Agrotis
+# Todo React - Agrotis
 
-Uma aplicação React que implementa o layout solicitado para exibição de registros em uma tabela, seguindo o design do Figma.
+Este é um aplicativo de gerenciamento de registros desenvolvido com React, TypeScript e Material UI.
 
-## Funcionalidades
+## Requisitos
 
-- Listagem de registros em tabela
-- Paginação de dados
-- Busca por texto
-- Opções de visualização
-- Notificação de sucesso
-- Layout responsivo
+- Node.js (versão 14 ou superior)
+- NPM (versão 6 ou superior)
 
 ## Tecnologias Utilizadas
 
 - React 18
 - TypeScript
 - Material UI
+- React Hook Form
+- React Router
+- Styled Components
+- json-server (para simular uma API REST)
 
-## Como Executar Localmente
-
-### Requisitos
-
-- Node.js 16+ e npm
-
-### Opção 1: Execução com Node.js (Desenvolvimento)
+## Instalação
 
 1. Clone o repositório
-2. Instale as dependências:
-   ```
-   npm install
-   ```
-3. Execute a aplicação:
-   ```
-   npm start
-   ```
-4. Acesse `http://localhost:3000` no navegador
+```
+git clone [url-do-repositório]
+```
 
-### Comandos Disponíveis
+2. Instale as dependências
+```
+cd todo-react-agrotis
+npm install
+```
 
-- `npm start` - Inicia a aplicação em modo de desenvolvimento
+## Executando a Aplicação
 
-## Layout do Figma
+Para executar a aplicação em modo de desenvolvimento com o servidor JSON:
 
-A aplicação implementa o design encontrado no Figma:
-https://www.figma.com/proto/rBRn4y1bKSFbBooHCiqEgv/OUT---Front-end # Agrotis-Desafio
+```
+npm run dev
+```
+
+Este comando inicia tanto o servidor de desenvolvimento React na porta 3000 quanto o json-server na porta 3001.
+
+### Executando apenas o frontend
+
+```
+npm start
+```
+
+### Executando apenas o servidor JSON
+
+```
+npm run server
+```
+
+## Estrutura do Projeto
+
+```
+/src
+  /assets        - Recursos estáticos como imagens
+  /components    - Componentes reutilizáveis
+  /context       - Contextos React para gerenciamento de estado
+  /hooks         - Hooks personalizados
+  /pages         - Componentes de página
+  /services      - Serviços para comunicação com API
+  /styles        - Estilos globais e tema
+  App.tsx        - Componente principal da aplicação
+  index.tsx      - Ponto de entrada da aplicação
+```
+
+## Funcionalidades
+
+- Listagem de registros
+- Criação de novos registros
+- Edição de registros existentes
+- Exclusão de registros
+- Filtragem e paginação
+- Visualização de detalhes
+
+## API JSON Server
+
+O projeto utiliza json-server para simular uma API REST. Os dados são armazenados no arquivo `db.json` na raiz do projeto.
+
+### Rotas disponíveis:
+
+- GET /registros - Lista todos os registros
+- GET /registros/:id - Obtém um registro específico
+- POST /registros - Cria um novo registro
+- PUT /registros/:id - Atualiza um registro existente
+- DELETE /registros/:id - Remove um registro
+
+- GET /laboratorios - Lista todos os laboratórios
+- GET /propriedades - Lista todas as propriedades
