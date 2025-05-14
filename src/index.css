@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Segoe UI', 'Helvetica Neue', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.MuiTableRow-root:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.success-message {
+  background-color: #4caf50 !important;
+  color: white !important;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .MuiTableCell-root {
+    padding: 8px;
+  }
+  
+  .MuiTableContainer-root {
+    overflow-x: auto;
+  }
+} 
