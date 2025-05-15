@@ -21,7 +21,8 @@ Este é um aplicativo de gerenciamento de registros desenvolvido com React, Type
 
 1. Clone o repositório
 ```
-git clone [url-do-repositório]
+git clone [https://github.com/DeboraLara1/Agrotis-Desafio.git]
+
 ```
 
 2. Instale as dependências
